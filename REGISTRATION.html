@@ -1,0 +1,220 @@
+<DOCTYPE html>
+    <html>
+        <title>
+            Registration form
+        </title>
+        <head>
+            <style>
+                body{
+                    background-image: url('https://wallpapercave.com/wp/G2xAgpw.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .f{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                }
+                .reg1{
+                    width:550px;
+                    height: 600px;
+                    background-color: rgb(254, 254, 255);
+                    border-radius: 10px;
+                    box-shadow: 5px 5px 5px rgb(129, 128, 128);
+                    padding-top: 3px;
+                   background-image: url('https://img.freepik.com/free-vector/paper-style-white-monochrome-background_23-2149023490.jpg?w=2000');
+                   background-repeat: no-repeat;
+                   background-size: cover;
+                   margin-top: 10px;
+                }
+                .page{
+                    height:100vh;
+                    background-color:transparent;
+                   
+                }
+                .tab{
+                    height:200px;
+                    width:1000px;
+                    background-color:rgb(222, 216, 216);
+                    margin-top: 13px;
+                    border-radius: 10px;
+                    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    
+                }
+                H1{
+                    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    text-align: center;
+                }
+                h2{
+                    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    text-align: center;
+                }
+                .name{
+                    margin-top: 45px;
+                    margin-left: 40px;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                   font-size: 18px;
+                }
+                .boc{
+                    width:350px;
+                    height:50px;
+                    background-color: rgb(212, 216, 216);
+                    border-color:transparent;
+                    margin-left: 80px;
+                    border-radius: 8px;
+                    box-shadow: 3px 3px 5px grey;
+                }
+                .boc1{
+                    width:350px;
+                    height:50px;
+                    background-color: rgb(212, 216, 216);
+                    border-color:transparent;
+                    margin-left: 85px;
+                    border-radius: 8px;
+                    box-shadow: 3px 3px 5px grey;
+                }
+                .boc2{
+                    width:350px;
+                    height:50px;
+                    background-color: rgb(212, 216, 216);
+                    border-color:transparent;
+                    margin-left: 57px;
+                    border-radius: 8px;
+                    box-shadow: 3px 3px 5px grey;
+                }
+                .boc3{
+                    width:350px;
+                    height:50px;
+                    background-color: rgb(212, 216, 216);
+                    border-color:transparent;
+                    margin-left: 31px;
+                    border-radius: 8px;
+                    box-shadow: 3px 3px 5px grey;
+
+                }
+                .acc{
+                    text-align: center;
+                    margin-top: 30px;
+                }
+                .sub{
+                    text-align: center;
+                    margin-top: 28px;
+                    margin-bottom: 20px;
+                   
+                }
+                .butto{
+                    width:130px;
+                    height: 50px;
+                    background-color: rgb(177, 168, 43);
+                    border-color: transparent;
+                    font-size: 15px;
+                    border-radius: 9px;
+                                 }
+                td,th{
+                    
+                    padding-left: 16px;
+                    padding-right: 16px;
+                    padding-top: 8px;
+                }
+                table{
+                    border-collapse: collapse;
+                    width: 80%;
+                    text-align: center;
+                    margin-bottom: 19px;
+                   
+                }
+
+            </style>
+
+        </head>
+        <body>
+    
+            <form onsubmit="return false;">
+            <div class="page f">
+                
+                <div class="reg1">
+                    <H1><b>Registration form</b></H1>
+                <div class="name">
+                    <label for="nam">Name</label> 
+                    <input class="boc" id="nam" type="text" placeholder="Enter full name" required>
+                </div>
+                <div class="name">
+                    <label for="mail">Email</label>
+                     <input class="boc1" id="mail" type="email" placeholder="Enter email"  required>
+                    </div>
+            <div class="name">
+                <label for="pass">Password</label>
+                 <input class="boc2" id="pass" type="password" placeholder="Enter password" required>
+                </div>
+            <div class="name">
+                <label for="dob">Date of Birth</label> 
+                <input class="boc3" id="dob" type="date" max="2004-11-09" min="1980-11-09" required>
+            </div>
+            <div class="acc">
+                <input type="checkbox" id="apt" required><b>Accept Terms & Conditions</b>
+            </div>
+            <div class="sub">
+                <input type="submit" id="submt" class="butto" onclick="funton()">
+            </div>
+         </div>
+        </form>
+      
+        
+            
+            <div class="tab f">
+                <h2>Your Entries</h2>
+                <table id="table">
+                
+                <tr>
+                    <th>Name</th>
+                    <th>E-mail</th>
+                    <th>Password</th>
+                    <th>Date of birth</th>
+                    <th>Accept terms</th>
+                </tr>
+                <tr>
+                    <td id="namt"></td>
+                    
+                    <td id="mailt"></td>
+                    
+                    <td id="passt"></td>
+                    
+                    <td id="dobt"></td>
+                    
+                    <td id="aptt"></td>
+                    
+                    
+                </tr>
+               
+            </table>
+        </div></div>
+    </form>
+        
+        <script type="text/javascript">
+        
+              const namt=document.getElementById("namt")
+               const mailt=document.getElementById("mailt")
+               const passt=document.getElementById("passt")
+               const dobt=document.getElementById("dobt")
+                const aptt=document.getElementById("aptt")
+                function funton(){
+                namt.innerHTML=document.getElementById("nam").value;
+                mailt.innerHTML=document.getElementById("mail").value;
+                passt.innerHTML=document.getElementById("pass").value;
+                dobt.innerHTML=document.getElementById("dob").value;
+                aptt.innerHTML=document.getElementById("apt").checked;
+                var ue={
+                    Name:namt.innerHTML
+                };
+                var Entries= JSON.parse(localStorage.getItem('Entires'));
+                Entries.push(ue);
+                localStorage.setItem('Entries', JSON.stringify(Entries));
+                }
+
+        </script>
+        </body>
+
+        
+    </html>
